@@ -38,6 +38,17 @@ Grey dark 3: #999
   --line: 1px solid var(--color-grey-light-2);
 }
 
+// SASS variables
+$bp-largest: 81.25em; //1300px
+$bp-large: 68.75em;   //1100px
+$bp-medium: 59.375em; //950px
+$bp-small: 45em; //720px
+$bp-extra-small: 37.5em; //600px
+$bp-500: 31.25em; //500px
+$bp-370: 23.125em; //370px
+$bp-325: 20.3125em; //325px
+
+
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +63,22 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 62.5% == 10px ; 1rem == 10px
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%; // decreasing global font size @ 1100px
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 42%; // decreasing global font size @ 720px
+  }
+
+  @media only screen and (max-width: $bp-370) {
+    font-size: 37%; // decreasing global font size @ 370px
+  }
+
+  @media only screen and (max-width: $bp-325) {
+    font-size: 34%; // decreasing global font size @ 325px
+  }
 }
 
 body {
@@ -65,4 +92,9 @@ body {
   background-repeat: no-repeat;
 
   min-height: 100vh;
+}
+
+::selection {
+  background-color: var(--color-primary-light);
+  color: #fff;
 }
