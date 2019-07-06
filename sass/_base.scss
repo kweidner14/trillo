@@ -72,13 +72,13 @@ html {
     font-size: 42%; // decreasing global font size @ 720px
   }
 
-  @media only screen and (max-width: $bp-370) {
-    font-size: 37%; // decreasing global font size @ 370px
-  }
-
-  @media only screen and (max-width: $bp-325) {
-    font-size: 34%; // decreasing global font size @ 325px
-  }
+  //@media only screen and (max-width: $bp-370) {
+  //  font-size: 37%; // decreasing global font size @ 370px
+  //}
+  //
+  //@media only screen and (max-width: $bp-325) {
+  //  font-size: 34%; // decreasing global font size @ 325px
+  //}
 }
 
 body {

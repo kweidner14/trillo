@@ -607,6 +607,13 @@
   align-items: center;
   border-bottom: var(--line);
 
+  @media only screen and (max-width: $bp-370) {
+    justify-content: space-around;
+  }
+  @media only screen and (max-width: $bp-325) {
+  flex-direction: column;
+}
+
 
   &__heading {
     font-size: 2.25rem;
@@ -619,13 +626,27 @@
       font-size: 1.8rem;
       padding: 1.25rem 2rem;
     }
+    @media only screen and (max-width: $bp-370) {
+      font-size: 1.5rem;
+      font-weight: 400;
+      padding: 1.25rem;
+    }
+    @media only screen and (max-width: $bp-500) {
+      padding: 0.75rem;
+    }
   }
 
   &__stars {
     margin-right: auto;
     display: flex;
 
-
+    @media only screen and (max-width: $bp-370) {
+      margin: 0;
+    }
+    @media only screen and (max-width: $bp-325) {
+      margin-top: 1rem;
+      order: -1;
+    }
   }
 
   &__icon-star,
@@ -639,10 +660,18 @@
     font-size: 1.2rem;
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $bp-325) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__icon-location {
     margin-right: .5rem;
+
+    @media only screen and (max-width: $bp-325) {
+      margin: 0;
+    }
   }
 
   &__rating {
@@ -657,8 +686,9 @@
     align-items: center;
     justify-content: center;
 
-    @media only screen and (max-width: $bp-extra-small) {
+    @media only screen and (max-width: $bp-370) {
       padding: 0 1.5rem;
+      margin: 0;
     }
   }
 
